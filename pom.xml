@@ -5,4 +5,8 @@
   <groupId>is.ru</groupId>
   <version>1.0-SNAPSHOT</version>
   <artifactId>helloworld</artifactId>
+  
+ <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+ </properties>
 </project>
