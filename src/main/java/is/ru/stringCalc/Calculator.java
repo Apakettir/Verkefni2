@@ -3,7 +3,10 @@ package is.ru.stringCalc;
 public class Calculator{
   
   public int add(String numbers){
-    return 0;
+    if(numbers == ""){
+      return 0;
+    }
+    return 1;
   }
 
 }

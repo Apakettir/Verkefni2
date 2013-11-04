@@ -12,4 +12,9 @@ public class testCalculator{
   public void testEmptyString() {
     assertEquals(0, calc.add(""));
   }
+
+  @Test
+  public void testOneNumber() {
+    assertEquals(1, calc.add("1"));
+  }
 }
