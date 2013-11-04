@@ -22,4 +22,10 @@ public class testCalculator{
   public void testTwoNumbers() {
     assertEquals(3, calc.add("1, 2"));
   }
+
+  @Test
+  public void testThreeNumbers() {
+    assertEquals(6, calc.add("1, 2, 3"));
+  }
+
 }
