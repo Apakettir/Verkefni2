@@ -28,4 +28,8 @@ public class testCalculator{
     assertEquals(6, calc.add("1, 2, 3"));
   }
 
+  @Test
+  public void testTenNumbers() {
+    assertEquals(55, calc.add("1, 2, 3, 4, 5, 6, 7, 8, 9, 10"));
+  }
 }
