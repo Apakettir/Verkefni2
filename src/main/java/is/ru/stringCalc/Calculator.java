@@ -6,14 +6,25 @@ public class Calculator{
     if(numbers == ""){
       return 0;
     }
-    String[] Numbers = numbers.split(",");
-    int heild = 0;
-    for(String number : Numbers){
-      int temp = Integer.parseInt(number);
-      heild += temp;
-    }
-
+    String[] Numbers = split(numbers);
+    int heild = samlagning(Numbers);
     return heild; 
   }
+  private static String[] split(String numbers){
+    return numbers.split(",");
+  }
 
+  private static int samlagning(String[] Numbers){
+    int heild = 0;
+    for(String number : Numbers){
+      int temp = toInt(number);
+      heild += temp;
+    }
+    return heild;
+  }
+  
+  private static int toInt(String number){
+    return Integer.parseInt(number);
+    
+  }
 }
