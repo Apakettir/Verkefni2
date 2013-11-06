@@ -32,4 +32,9 @@ public class testCalculator{
   public void testTenNumbers() {
     assertEquals(55, calc.add("1, 2, 3, 4, 5, 6, 7, 8, 9, 10"));
   }
+
+  @Test
+  public void testNewLineSplit(){
+    assertEquals(7, calc.add("1\n2,4"));
+  }
 }

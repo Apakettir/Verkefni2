@@ -11,7 +11,7 @@ public class Calculator{
     return heild; 
   }
   private static String[] split(String numbers){
-    return numbers.split(",");
+    return numbers.split("(,)|(\n)");
   }
 
   private static int samlagning(String[] Numbers){
