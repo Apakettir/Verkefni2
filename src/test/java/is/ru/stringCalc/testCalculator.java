@@ -37,4 +37,13 @@ public class testCalculator{
   public void testNewLineSplit(){
     assertEquals(7, calc.add("1\n2,4"));
   }
+
+  @Test
+  public void testDotDelimiter(){
+    assertEquals(6, calc.add("//.\n1.2.3"));
+  }
+  @Test
+  public void testSemicolonDelimiter(){
+    assertEquals(7, calc.add("//;\n1;2;4"));
+  }
 }

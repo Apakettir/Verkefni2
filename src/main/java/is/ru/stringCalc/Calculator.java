@@ -6,10 +6,15 @@ public class Calculator{
     if(numbers == ""){
       return 0;
     }
+    if(numbers.startsWith("//")){
+      String justNumbers = numbers.substring(3);
+      String[] Numbers = justNumbers.split(numbers.substring(2,3));
+      return samlagning(Numbers);
+    }
     String[] Numbers = split(numbers);
-    int heild = samlagning(Numbers);
-    return heild; 
+    return samlagning(Numbers); 
   }
+
   private static String[] split(String numbers){
     return numbers.split("(,)|(\n)");
   }
