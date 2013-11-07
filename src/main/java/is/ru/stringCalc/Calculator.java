@@ -6,17 +6,18 @@ public class Calculator{
     if(numbers == ""){
       return 0;
     }
-    if(numbers.startsWith("//")){
-      String justNumbers = numbers.substring(3);
-      String[] Numbers = justNumbers.split(numbers.substring(2,3));
-      return samlagning(Numbers);
-    }
     String[] Numbers = split(numbers);
     return samlagning(Numbers); 
   }
 
   private static String[] split(String numbers){
-    return numbers.split("(,)|(\n)");
+    if(numbers.startsWith("//")){
+      String justNumbers = numbers.substring(3);
+      return justNumbers.split(numbers.substring(2,3));
+    }
+    else{
+      return numbers.split("(,)|(\n)");
+    }
   }
 
   private static int samlagning(String[] Numbers){
