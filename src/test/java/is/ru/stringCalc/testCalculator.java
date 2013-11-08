@@ -1,10 +1,15 @@
 package is.ru.stringCalc;
 
 import static org.junit.Assert.assertEquals;
-
+import is.ru.stringCalc.Calculator.neikvaedTalaExcep;
 import org.junit.Test;
+import org.junit.Rule;
+import org.junit.rules.ExpectedException;
 
 public class testCalculator{
+
+  @Rule
+  public ExpectedException exception = ExpectedException.none();
 
   Calculator calc = new Calculator();
 
@@ -45,5 +50,11 @@ public class testCalculator{
   @Test
   public void testSemicolonDelimiter(){
     assertEquals(7, calc.add("//;\n1;2;4"));
+  }
+
+  @Test(expected=neikvaedTalaExcep.class)
+  public void testException(){
+    exception.expectMessage("Negatives not allowed: -5, -9");
+    calc.add("4,-5,3,-9");
   }
 }
